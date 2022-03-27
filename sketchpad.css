@@ -5,4 +5,22 @@
 div {
     margin: 0;
     border-width: 0;
+    display: block;
 }
+/*set up square start */
+#container{
+    background-color: red;
+    width: 512px;
+    height: 512px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.a_row /*this class is for a box with column flex direction */ 
+{
+    display: flex;
+    flex-direction: row;
+    background-color: palegoldenrod;
+}
+/*setup square end */
