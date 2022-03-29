@@ -5,6 +5,7 @@ let rowDiv; /* store row element just create */
 const container = document.getElementById('container');
 
 /* create elements start */
+function makeElements(){
 for(let i = 0;i < size;i++) //make column elements
 {
     colDiv = document.createElement('div');
@@ -15,10 +16,31 @@ for(let i = 0;i < size;i++) //make column elements
     for(let r = 0; r < size; r++) //make row elements, paraent is column element
     {
         rowDiv = document.createElement('div');
+        //console.log(rowDiv.id)
         colDiv.appendChild(rowDiv);
-        rowDiv.textContent = "1";
+        rowDiv.textContent = "";
         rowDiv.style.width = `${sideLength}px`; //set every row elements' width to fill width of container
     };
 };
+}
 /* create elements end */
-console.log();
+
+/* when mouse is hover, that area will change color, start*/
+function whenHover()
+{
+let columns = container.children;
+for(let i = 0;i < columns.length; i++)
+{
+    let rows = columns[i].children;
+    for(let r = 0;r < rows.length;r++)
+    {
+        rows[r].addEventListener('mouseover', function(){
+            rows[r].style.backgroundColor = "blue";
+        });
+    };
+};
+};
+/* when mouse is hover, that area will change color, end*/
+
+makeElements();
+whenHover();
