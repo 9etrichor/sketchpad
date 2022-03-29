@@ -13,14 +13,13 @@ div {
     width: 512px;
     height: 512px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .a_row /*this class is for a box with column flex direction */ 
 {
     display: flex;
     flex-direction: row;
-    background-color: palegoldenrod;
+    background-color: palegoldenrod; 
+   /* height: 32px; */
 }
 /*setup square end */
